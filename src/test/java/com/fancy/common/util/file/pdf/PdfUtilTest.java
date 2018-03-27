@@ -1,4 +1,4 @@
-package com.fancy.common.util.pdf;
+package com.fancy.common.util.file.pdf;
 
 import java.io.File;
 import java.io.FileInputStream;

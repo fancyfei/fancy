@@ -1,4 +1,4 @@
-package com.fancy.common.util.xml;
+package com.fancy.common.util.file.xml;
 
 import java.io.File;
 import java.io.InputStream;

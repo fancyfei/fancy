@@ -1,4 +1,4 @@
-package com.fancy.common.util.pdf;
+package com.fancy.common.util.file.pdf;
 
 import java.io.BufferedReader;
 import java.io.File;

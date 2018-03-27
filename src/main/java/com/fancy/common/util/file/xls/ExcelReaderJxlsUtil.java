@@ -1,4 +1,4 @@
-package com.fancy.common.util.xls;
+package com.fancy.common.util.file.xls;
 
 import java.io.File;
 import java.io.FileInputStream;

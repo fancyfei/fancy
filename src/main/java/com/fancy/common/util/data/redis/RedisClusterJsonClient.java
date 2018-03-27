@@ -1,4 +1,4 @@
-package com.fancy.common.util.redis;
+package com.fancy.common.util.data.redis;
 
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.logging.Log;

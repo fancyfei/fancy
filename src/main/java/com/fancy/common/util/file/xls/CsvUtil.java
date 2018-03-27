@@ -1,4 +1,4 @@
-package com.fancy.common.util.xls;
+package com.fancy.common.util.file.xls;
 
 import java.io.BufferedReader;
 import java.io.IOException;
