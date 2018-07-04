@@ -7,9 +7,10 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import org.apache.pdfbox.io.RandomAccessFile;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.util.PDFTextStripper;
+import org.apache.pdfbox.text.PDFTextStripper;
 
 public class PdfboxToText {
 	private File file;
@@ -21,10 +22,10 @@ public class PdfboxToText {
 	}
 	public String getTextFromPdf(){
 		String result = null;
-		FileInputStream is = null;
+		RandomAccessFile is = null;
         PDDocument document = null;
         try {
-            is = new FileInputStream(file);
+            is = new RandomAccessFile(file.getAbsoluteFile(), "r");
             PDFParser parser = new PDFParser(is);
             parser.parse();
             document = parser.getPDDocument();

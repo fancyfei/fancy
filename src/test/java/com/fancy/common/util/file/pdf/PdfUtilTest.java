@@ -11,13 +11,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.itextpdf.text.pdf.PdfReader;
 import org.apache.commons.io.FileUtils;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentInformation;
 import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDDocumentOutline;
 import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDOutlineItem;
-
-import com.lowagie.text.pdf.PdfReader;
 
 public class PdfUtilTest {
 

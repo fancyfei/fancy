@@ -1,12 +1,13 @@
 package com.fancy.common.util.file.pdf;
 
+import com.itextpdf.text.pdf.PdfReader;
+import com.itextpdf.text.pdf.SimpleBookmark;
+
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.SimpleBookmark;
 
 public class PdfUtil {
 	
@@ -19,7 +20,7 @@ public class PdfUtil {
 	 */
 	@SuppressWarnings("unchecked")
 	public static List<String> getBookMark(PdfReader reader) {
-		List<Map<String, Object>> bmS = SimpleBookmark.getBookmark(reader);
+		List<HashMap<String, Object>> bmS = SimpleBookmark.getBookmark(reader);
 		List<String> result = new ArrayList<String>();
 		for(Map<String, Object> bm : bmS) {
 			fillBookMark(bm, result);
@@ -30,8 +31,9 @@ public class PdfUtil {
 	private static void fillBookMark(Map<String, Object> bm, List<String> bmList) {
 		bmList.add(bm.get("Title").toString());
 		List<Map<String, Object>> kids = (List<Map<String, Object>>) bm.get("Kids");
-		if (kids == null)
+		if (kids == null) {
 			return;
+		}
 		for (Map<String, Object> k : kids) {
 			fillBookMark(k, bmList);
 		}
