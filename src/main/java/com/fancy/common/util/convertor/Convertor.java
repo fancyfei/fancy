@@ -3,7 +3,7 @@ package com.fancy.common.util.convertor;
 /**
  * 类型转换器
  *
- * @author : ranlongfei@tseveryday.com
+ * @author : fancyfei@gmail.com
  * @date 2019/3/22
  */
 public interface Convertor {
