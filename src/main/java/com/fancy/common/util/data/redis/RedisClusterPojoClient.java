@@ -1,6 +1,6 @@
 package com.fancy.common.util.data.redis;
 
-import com.lvmama.vst.comm.utils.bean.BeanHessionSerializeUtil;
+import com.fancy.common.util.comm.BeanHessionSerializeUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import redis.clients.jedis.JedisCluster;
@@ -42,7 +42,7 @@ public class RedisClusterPojoClient {
 		if(key == null) return null;
 		if(clazz == null) return null;
 		byte[] obj = getJedisCluster().get(key.getBytes());
-		return (T)BeanHessionSerializeUtil.deserialize(obj);
+		return (T) BeanHessionSerializeUtil.deserialize(obj);
 	}
 
 	/**
